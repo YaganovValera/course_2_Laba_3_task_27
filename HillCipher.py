@@ -100,7 +100,6 @@ def get_coding_text(key_file):
         for line in text_file:
             if key_file in line:
                 text = line[(len_key+1):]
-                print("1")
                 return text
         return False
 

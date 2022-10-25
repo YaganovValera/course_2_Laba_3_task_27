@@ -135,6 +135,8 @@ class Personal_account(QMainWindow):
 
     def encrypt(self):
         enc_text = self.encrypt_text.toPlainText()
+        enc_text = str(enc_text)
+        enc_text = enc_text.replace('\n', ' ')
         key = self.key_1.text()
         enc_text = convert_text_to_digits(enc_text, 'text')
         key_digit = key_verification(key, 'text')
